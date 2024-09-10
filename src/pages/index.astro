@@ -1,8 +1,7 @@
 ---
-const response =  await fetch('http://localhost:4321/api/posts');
-
+const url = Astro.url.origin;
+const response =  await fetch(`${url}/api/posts`);
 const data = await response.json();
-
 console.log(data);
 ---
 
